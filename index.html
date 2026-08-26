@@ -491,6 +491,22 @@
     .hero-details-action{align-items:flex-start; margin-top:28px; text-align:left;}
     .hero-details .cta-button{padding:17px 24px;}
   }
+  /* ---------- menu e CTA em rosa premium ---------- */
+  .nav-toggle{width:52px; height:52px; padding:0 13px; border:1px solid rgba(185,121,132,.72); border-radius:15px; background:rgba(250,247,244,.88); color:var(--accent); box-shadow:0 12px 26px -18px rgba(132,70,86,.7), inset 0 1px rgba(255,255,255,.8); backdrop-filter:blur(8px); transition:transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;}
+  .nav-toggle span{height:1px; width:100%; background:currentColor;}
+  .nav-toggle span:nth-child(2){width:72%; align-self:flex-end;}
+  .nav-toggle:hover{transform:translateY(-2px); border-color:var(--accent); background:rgba(227,188,192,.92); box-shadow:0 16px 30px -18px rgba(132,70,86,.78);}
+  .nav-toggle:active{transform:scale(.95);}
+  header.nav-open .nav-toggle{background:var(--accent); border-color:var(--accent); color:var(--ivory);}
+  header.nav-open nav{border:1px solid rgba(185,121,132,.32); border-radius:18px; background:rgba(250,247,244,.97); box-shadow:0 22px 44px -26px rgba(132,70,86,.55);}
+  .hero-cta{position:relative; overflow:hidden; min-width:248px; padding:20px 30px; border:1px solid rgba(255,255,255,.65); border-radius:999px; background:linear-gradient(135deg,#CE8C98 0%,#B97984 52%,#9E5D6D 100%); color:#FFF9F7; box-shadow:0 18px 34px -18px rgba(132,70,86,.78), inset 0 1px rgba(255,255,255,.34);}
+  .hero-cta::before{content:''; position:absolute; inset:1px 35% 1px 1px; border-radius:999px; background:linear-gradient(110deg,rgba(255,255,255,.24),transparent); pointer-events:none;}
+  .hero-cta span{position:relative; z-index:1; color:inherit;}
+  .hero-cta:hover{transform:translateY(-3px); background:linear-gradient(135deg,#D79CA6 0%,#B97984 55%,#935468 100%); color:#FFF9F7; box-shadow:0 23px 40px -18px rgba(132,70,86,.88), inset 0 1px rgba(255,255,255,.4);}
+  @media (max-width: 860px){
+    .nav-toggle{width:50px; height:50px; border-radius:14px;}
+    .hero-cta{min-width:232px; padding:19px 27px;}
+  }
 </style>
 </head>
 <body>
