@@ -450,7 +450,8 @@
   .scroll-cue .line{background:linear-gradient(rgba(35,28,33,0),var(--accent-soft));}
   .scroll-cue .line::after{background:var(--ink);}
   header{color:var(--ink);}
-  .brandmark, nav a{color:var(--ink);}
+  header .brandmark{display:none;}
+  nav a{color:var(--ink);}
   header.solid{background:rgba(250,247,244,.94);}
   header.solid .brandmark, header.solid nav a{color:var(--forest);}
   @media (max-width: 860px){
@@ -461,6 +462,26 @@
     .hero-meta{gap:20px 28px; margin-top:32px;}
   }
 
+  /* ---------- capa minimalista ---------- */
+  .hero-minimal{display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; padding:0 6vw 10vw; color:var(--ink);}
+  .hero-name{font-family:'Fraunces', serif; font-size:clamp(42px,6.5vw,92px); line-height:.96; letter-spacing:-.035em; color:var(--ink);}
+  .hero-name em{color:var(--accent); font-style:italic;}
+  .hero-details{background:var(--ivory); color:var(--ink); padding:54px 0 58px; border-bottom:1px solid var(--line);}
+  .hero-details-inner{display:flex; justify-content:space-between; align-items:flex-end; gap:32px;}
+  .hero-details-copy .eyebrow{display:block; margin-bottom:14px;}
+  .hero-details-copy p{font-family:'Fraunces', serif; font-size:clamp(24px,3vw,38px); line-height:1.18; max-width:18ch; color:var(--forest);}
+  .hero-details-action{display:flex; flex-direction:column; align-items:flex-end; gap:18px; color:rgba(35,28,33,.66); font-size:12px; letter-spacing:.08em; text-transform:uppercase; text-align:right;}
+  .hero-details .cta-button{margin:0; border-color:var(--accent); color:var(--forest);}
+  .hero-details .cta-button:hover{background:var(--accent); color:var(--ivory);}
+  @media (max-width: 860px){
+    .hero-minimal{padding:0 7vw 10svh;}
+    .hero-name{font-size:clamp(48px,14vw,76px);}
+    .hero-details{padding:38px 0 44px;}
+    .hero-details-inner{display:block;}
+    .hero-details-copy p{font-size:30px; max-width:14ch;}
+    .hero-details-action{align-items:flex-start; margin-top:28px; text-align:left;}
+    .hero-details .cta-button{padding:17px 24px;}
+  }
 </style>
 </head>
 <body>
@@ -486,17 +507,22 @@
       <img id="heroImg" src="assets/hero-desktop.webp" srcset="assets/hero-desktop.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Chimara Emília, nutricionista" decoding="async" loading="eager" fetchpriority="high">
     </picture>
   </div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow"><div class="rule"></div><span class="eyebrow">Nutrição Oncológica · Emagrecimento · Nutrição Clínica</span></div>
-    <h1>Alimentação como <em>aliada</em> do seu cuidado</h1>
-    <p class="hero-sub">Acompanhamento nutricional acolhedor e individualizado, construído para a sua rotina, o seu momento e os seus objetivos — sem restrições extremas e sem terrorismo nutricional.</p>
-    <div class="hero-meta">
-      <div>Registro<strong>CRN-SP 78744</strong></div>
-      <div>Consultório<strong>Osasco, São Paulo</strong></div>
-      <div>Formato<strong>Presencial &amp; on-line</strong></div>
+  <div class="hero-inner hero-minimal">
+    <p class="hero-name">Chimara <em>Emília</em></p>
+  </div>
+</section>
+
+<section class="hero-details" aria-label="Resumo do atendimento">
+  <div class="wrap hero-details-inner">
+    <div class="hero-details-copy">
+      <span class="eyebrow">Nutrição clínica com presença</span>
+      <p>Um acompanhamento acolhedor, individualizado e possível para a sua rotina.</p>
+    </div>
+    <div class="hero-details-action">
+      <span>Osasco · Presencial e on-line</span>
+      <a class="cta-button" href="https://wa.me/5511996170623" target="_blank" rel="noopener">Agendar consulta <span aria-hidden="true">↗</span></a>
     </div>
   </div>
-  <div class="scroll-cue"><span>Role para conhecer</span><div class="line"></div></div>
 </section>
 
 <div class="marquee">
