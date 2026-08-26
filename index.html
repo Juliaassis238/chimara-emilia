@@ -463,9 +463,15 @@
   }
 
   /* ---------- capa minimalista ---------- */
-  .hero-minimal{display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-end; padding:0 6vw 10vw; color:var(--ink);}
+  .hero-minimal{display:flex; flex-direction:column; align-items:center; justify-content:space-between; min-height:100svh; padding:clamp(180px,27vh,300px) 6vw 7vh; color:var(--ink);}
+  .hero-signature{display:flex; align-items:baseline; justify-content:center; gap:18px; width:100%;}
   .hero-name{font-family:'Fraunces', serif; font-size:clamp(42px,6.5vw,92px); line-height:.96; letter-spacing:-.035em; color:var(--ink);}
   .hero-name em{color:var(--accent); font-style:italic;}
+  .hero-role{font-family:'Work Sans', sans-serif; font-size:clamp(10px,1.05vw,14px); letter-spacing:.22em; text-transform:uppercase; font-weight:500; color:var(--forest); white-space:nowrap;}
+  .hero-cta{display:inline-flex; align-items:center; gap:16px; padding:17px 30px; border:1px solid rgba(45,32,41,.45); background:rgba(250,247,244,.92); color:var(--forest); font-size:11px; letter-spacing:.18em; text-transform:uppercase; box-shadow:0 16px 30px -22px rgba(35,28,33,.7); transition:transform .2s ease, background .2s ease, color .2s ease;}
+  .hero-cta span{font-size:18px; line-height:0; letter-spacing:0;}
+  .hero-cta:hover{transform:translateY(-2px); background:var(--forest); color:var(--ivory);}
+  .hero-cta:active{transform:scale(.97);}
   .hero-details{background:var(--ivory); color:var(--ink); padding:54px 0 58px; border-bottom:1px solid var(--line);}
   .hero-details-inner{display:flex; justify-content:space-between; align-items:flex-end; gap:32px;}
   .hero-details-copy .eyebrow{display:block; margin-bottom:14px;}
@@ -474,8 +480,11 @@
   .hero-details .cta-button{margin:0; border-color:var(--accent); color:var(--forest);}
   .hero-details .cta-button:hover{background:var(--accent); color:var(--ivory);}
   @media (max-width: 860px){
-    .hero-minimal{padding:0 7vw 10svh;}
-    .hero-name{font-size:clamp(48px,14vw,76px);}
+    .hero-minimal{min-height:100svh; padding:clamp(150px,24vh,235px) 7vw 6svh;}
+    .hero-signature{gap:12px; justify-content:flex-start;}
+    .hero-name{font-size:clamp(40px,11.5vw,64px);}
+    .hero-role{font-size:9px; letter-spacing:.16em;}
+    .hero-cta{padding:16px 22px; font-size:10px; letter-spacing:.14em;}
     .hero-details{padding:38px 0 44px;}
     .hero-details-inner{display:block;}
     .hero-details-copy p{font-size:30px; max-width:14ch;}
@@ -508,7 +517,11 @@
     </picture>
   </div>
   <div class="hero-inner hero-minimal">
-    <p class="hero-name">Chimara <em>Emília</em></p>
+    <div class="hero-signature">
+      <p class="hero-name">Chimara <em>Emília</em></p>
+      <span class="hero-role">Nutricionista</span>
+    </div>
+    <a class="hero-cta" href="https://wa.me/5511996170623" target="_blank" rel="noopener">Agendar consulta <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
@@ -520,7 +533,6 @@
     </div>
     <div class="hero-details-action">
       <span>Osasco · Presencial e on-line</span>
-      <a class="cta-button" href="https://wa.me/5511996170623" target="_blank" rel="noopener">Agendar consulta <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </section>
