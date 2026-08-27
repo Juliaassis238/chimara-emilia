@@ -507,12 +507,58 @@
     .nav-toggle{width:50px; height:50px; border-radius:14px;}
     .hero-cta{min-width:232px; padding:19px 27px;}
   }
+
+  /* ---------- identidade azul-marinho e logo transparente ---------- */
+  :root{
+    --ivory:#FFFFFF;
+    --ivory-2:#EAF2FA;
+    --forest:#203A59;
+    --forest-2:#1A304B;
+    --forest-3:#29496D;
+    --accent:#FFFFFF;
+    --accent-soft:#DCEAF7;
+    --ink:#FFFFFF;
+    --line:rgba(255,255,255,.18);
+    --line-light:rgba(255,255,255,.28);
+    --nav-panel:#203A59;
+    --nav-text:#FFFFFF;
+  }
+  body{background:var(--forest);color:var(--ivory);}
+  header, header.solid{background:var(--forest);color:var(--ivory);box-shadow:0 1px 0 var(--line);}
+  header.solid{backdrop-filter:blur(10px);}
+  nav a, header.solid nav a{color:var(--ivory);}
+  .brandmark-logo{display:block;width:clamp(150px,17vw,230px);height:auto;filter:brightness(0) invert(1);}
+  header .brandmark-logo{max-height:52px;object-fit:contain;}
+  .hero{background:var(--forest);}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,58,89,.58),rgba(32,58,89,.18) 58%,rgba(32,58,89,.05));pointer-events:none;}
+  .hero-inner{color:var(--ivory);}
+  .hero-name,.hero h1,.hero-sub,.hero-meta div,.hero-meta strong,.scroll-cue{color:var(--ivory);}
+  .hero-name em,.hero-role,.hero-eyebrow,.hero .eyebrow{color:var(--accent-soft);}
+  .hero-role{font-weight:600;}
+  .hero-cta{background:var(--ivory);color:var(--forest);border-color:var(--ivory);}
+  .hero-cta:hover{background:var(--accent-soft);color:var(--forest);}
+  .marquee,.areas,.cta-final,footer{background:var(--forest);color:var(--ivory);}
+  .marquee-track span,.areas-head h2,.area-row h3,.cta-final h2{color:var(--ivory);}
+  .areas-head p,.area-row p,.hero-details-action,.foot-grid,.foot-links{color:rgba(255,255,255,.78);}
+  .sobre,.paraquem,.atendimento{background:var(--forest-2);color:var(--ivory);}
+  .sobre h2,.sobre-copy p,.paraquem h2,.paraquem-list li,.atendimento-head h2,.atendimento-head p,.info-cols p{color:var(--ivory);}
+  .sobre-copy p:first-of-type{color:var(--accent-soft);}
+  .quote-band,.hero-details{background:var(--forest-3);color:var(--ivory);}
+  .quote-band blockquote,.hero-details-copy p{color:var(--ivory);}
+  .hero-details .eyebrow,.quote-band cite,.eyebrow,.info-cols .eyebrow{color:var(--accent-soft);}
+  .area-list,.area-row,.paraquem-list li{border-color:var(--line);}
+  .cta-button{border-color:var(--ivory);color:var(--ivory);}
+  .cta-button:hover{background:var(--ivory);color:var(--forest);}
+  .gallery figure{background:var(--forest-3);}
+  .gallery figcaption{color:var(--ivory);background:linear-gradient(0deg,rgba(20,37,57,.82),transparent);}
+  .foot-grid .brandmark-logo{filter:brightness(0) invert(1);}
+  .foot-links a:hover{color:var(--accent-soft);}
 </style>
 </head>
 <body>
 
 <header id="siteHeader">
-  <div class="brandmark">Chimara Emília <span>Nutricionista</span></div>
+  <img class="brandmark-logo" src="assets/chimara-emilia-logo.png" width="1931" height="519" alt="Chimara Emília — Nutricionista">
   <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -662,7 +708,7 @@
 
 <footer>
   <div class="wrap foot-grid">
-    <div class="brandmark">Chimara Emília <span>Nutricionista</span></div>
+    <img class="brandmark-logo" src="assets/chimara-emilia-logo.png" width="1931" height="519" alt="Chimara Emília — Nutricionista">
     <div class="foot-links">
       <a href="#sobre">Sobre</a>
       <a href="#areas">Áreas</a>
